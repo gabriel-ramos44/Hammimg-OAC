@@ -35,8 +35,6 @@ document.querySelector("#read-file").addEventListener('click', function() {
 		console.log(bin);
 		bin = write(bin);
 		blob = new Blob([bin], {type: "text/plain;charset=utf-8"}); //, {type: "application/octet-stream"})
-		console.log ("HAMMING DECODE: " + hammingR("100110010111110011010001010011010010"));
-		console.log("BIN TO STRING: " + binToString(hammingR("100110010111110011010001010011010010")));
 		saveAs(blob, fileName + ".wham"); // Salva o arquivo gerado adicionando extensão .wham
 	}
 //READ
